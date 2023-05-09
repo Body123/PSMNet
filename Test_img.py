@@ -120,7 +120,9 @@ def main():
         
         img = (img*256).astype('uint16')
         img = Image.fromarray(img)
-        img.save('Test_disparity.png')
+        root_dir = "/content/drive/MyDrive/Graduation_Project/sementic_segmentation/sementicKitti/unzip6/dataset/sequences/01/disparity"
+        root_dir += args.leftimg.split("/")[-1]
+        img.save(root_dir)
 
 if __name__ == '__main__':
    main()
